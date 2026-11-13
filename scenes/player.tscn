@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://demdltfgt8e6n"]
+
+[ext_resource type="AudioStream" uid="uid://5dmkbu7iejgd" path="res://sounds/footstep.wav" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cpr36g0cf6ex1" path="res://scripts/player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+height = 1.8
+
+[node name="player" type="CharacterBody3D" unique_id=633592686]
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=851008498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_sh265")
+
+[node name="Head" type="Node3D" parent="." unique_id=591969675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -0.261)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=779425574]
+
+[node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=1615316559]
+
+[node name="Sight" type="RayCast3D" parent="Head" unique_id=2013102355]
+target_position = Vector3(0, 0, -2.5)
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1927082761]
+stream = ExtResource("1_4flbx")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1019300996]
+
+[node name="Hint" type="Label" parent="HUD" unique_id=732844685]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
