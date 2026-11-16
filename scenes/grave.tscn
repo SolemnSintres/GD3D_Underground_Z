@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dfdg1u71e5l2q"]
+
+[ext_resource type="Script" uid="uid://cviug10i1rteo" path="res://scripts/grave.gd" id="1_qpo7b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kdo1t"]
+size = Vector3(0.8, 1.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qu2x6"]
+size = Vector3(0.8, 1.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ecyj"]
+size = Vector3(1, 0.2, 2)
+
+[node name="Grave" type="StaticBody3D" unique_id=1010282186]
+script = ExtResource("1_qpo7b")
+
+[node name="Headstone" type="MeshInstance3D" parent="." unique_id=700582077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = SubResource("BoxMesh_kdo1t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1862204226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("BoxShape3D_qu2x6")
+
+[node name="Mound" type="MeshInstance3D" parent="." unique_id=749294345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 1.1)
+mesh = SubResource("BoxMesh_3ecyj")

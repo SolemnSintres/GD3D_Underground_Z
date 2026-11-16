@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0s60srisg7g"]
 
 [ext_resource type="PackedScene" uid="uid://demdltfgt8e6n" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://dfdg1u71e5l2q" path="res://scenes/grave.tscn" id="2_rwgxs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qu2x6"]
 size = Vector3(60, 1, 60)
@@ -23,7 +24,7 @@ size = Vector3(60, 2, 0.3)
 [node name="World" type="Node3D" unique_id=1595679244]
 
 [node name="player" parent="." unique_id=633592686 instance=ExtResource("1_nnsk1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.811817, 0.668687, 0.12847328)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1672993, 3, 5.3307667)
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1572673802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -69,3 +70,20 @@ mesh = SubResource("BoxMesh_rwgxs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FenceUp" unique_id=1490617215]
 shape = SubResource("BoxShape3D_4wyf3")
+
+[node name="Grave" parent="." unique_id=1010282186 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -3)
+names = "Sock"
+
+[node name="Grave2" parent="." unique_id=784985726 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16)
+
+[node name="Grave3" parent="." unique_id=1589298451 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -12)
+
+[node name="Grave4" parent="." unique_id=651460186 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 19)
+
+[node name="Grave5" parent="." unique_id=928973947 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 9)
+names = "Caden"
