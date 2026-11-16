@@ -4,11 +4,13 @@ const gravity = 9.8
 const speed = 4.0
 const mouse = 0.002
 
+@onready var headlight = $Head/Flashlight
 @onready var head =  $Head
 @onready var footsteps = $Footsteps
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	headlight.visible = false
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -34,6 +36,8 @@ func _unhandled_input(event):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if event is InputEventMouseButton:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if Input.is_action_just_pressed("flashlight"):
+		headlight.visible = not headlight.visible
 
 func is_moving() -> bool:
 	var current_speed = Vector2(velocity.x,velocity.z).length()

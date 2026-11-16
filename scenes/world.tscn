@@ -21,6 +21,24 @@ size = Vector3(60, 2, 0.3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_4wyf3"]
 size = Vector3(60, 2, 0.3)
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k0juu"]
+sky_top_color = Color(0, 0.5871364, 0.99073297, 1)
+sky_horizon_color = Color(0.65883166, 0.8792658, 1, 1)
+sky_curve = 0.106066115
+sky_cover_modulate = Color(0, 0.6509289, 0.6555463, 1)
+ground_bottom_color = Color(0.4608764, 0.40146944, 0.33481383, 1)
+
+[sub_resource type="Sky" id="Sky_4wyf3"]
+sky_material = SubResource("ProceduralSkyMaterial_k0juu")
+
+[sub_resource type="Environment" id="Environment_rwgxs"]
+background_mode = 1
+background_color = Color(0.039215688, 0.050980393, 0.078431375, 1)
+sky = SubResource("Sky_4wyf3")
+ambient_light_source = 2
+ambient_light_color = Color(0.16470589, 0.1882353, 0.2509804, 1)
+ambient_light_energy = 0.3
+
 [node name="World" type="Node3D" unique_id=1595679244]
 
 [node name="player" parent="." unique_id=633592686 instance=ExtResource("1_nnsk1")]
@@ -87,3 +105,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 19)
 [node name="Grave5" parent="." unique_id=928973947 instance=ExtResource("2_rwgxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 9)
 names = "Caden"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=292924521]
+environment = SubResource("Environment_rwgxs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=229442874]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 30, 35)
+light_color = Color(0.6156863, 0.7058824, 0.8392157, 1)
+light_energy = 0.15
