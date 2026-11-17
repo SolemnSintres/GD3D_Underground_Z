@@ -34,10 +34,17 @@ sky_material = SubResource("ProceduralSkyMaterial_k0juu")
 [sub_resource type="Environment" id="Environment_rwgxs"]
 background_mode = 1
 background_color = Color(0.039215688, 0.050980393, 0.078431375, 1)
+background_energy_multiplier = 0.1
 sky = SubResource("Sky_4wyf3")
 ambient_light_source = 2
 ambient_light_color = Color(0.16470589, 0.1882353, 0.2509804, 1)
 ambient_light_energy = 0.3
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.039215688, 0.050980393, 0.078431375, 1)
+fog_density = 1.0
+fog_depth_begin = 2.0
+fog_depth_end = 14.0
 
 [node name="World" type="Node3D" unique_id=1595679244]
 
