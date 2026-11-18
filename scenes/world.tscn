@@ -1,21 +1,28 @@
 [gd_scene format=3 uid="uid://d0s60srisg7g"]
 
 [ext_resource type="PackedScene" uid="uid://demdltfgt8e6n" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="Material" uid="uid://bidsrdaqbc48v" path="res://materials/stone.tres" id="2_4wyf3"]
+[ext_resource type="Material" uid="uid://d4cxflg1jbrou" path="res://materials/ground.tres" id="2_k0juu"]
 [ext_resource type="PackedScene" uid="uid://dfdg1u71e5l2q" path="res://scenes/grave.tscn" id="2_rwgxs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qu2x6"]
+material = ExtResource("2_k0juu")
 size = Vector3(60, 1, 60)
+subdivide_width = 30
+subdivide_depth = 30
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nnsk1"]
 size = Vector3(60, 1, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nnsk1"]
+material = ExtResource("2_4wyf3")
 size = Vector3(0.3, 2, 60)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rwgxs"]
 size = Vector3(0.3, 2, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rwgxs"]
+material = ExtResource("2_4wyf3")
 size = Vector3(60, 2, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4wyf3"]

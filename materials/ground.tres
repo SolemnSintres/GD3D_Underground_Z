@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4cxflg1jbrou"]
+
+[ext_resource type="Texture2D" uid="uid://bwb7g2u21gugp" path="res://textures/ground.png" id="1_xygne"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_xygne")
+metallic_specular = 0.0
+uv1_triplanar = true
+uv1_world_triplanar = true

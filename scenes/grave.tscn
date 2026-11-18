@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://dfdg1u71e5l2q"]
 
 [ext_resource type="Script" uid="uid://cviug10i1rteo" path="res://scripts/grave.gd" id="1_qpo7b"]
+[ext_resource type="Texture2D" uid="uid://dpabap3kpaej5" path="res://textures/stone.png" id="2_inmiy"]
+[ext_resource type="Material" uid="uid://d4cxflg1jbrou" path="res://materials/ground.tres" id="3_lhpym"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qe13i"]
+albedo_texture = ExtResource("2_inmiy")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kdo1t"]
 size = Vector3(0.8, 1.2, 0.2)
@@ -16,6 +21,7 @@ script = ExtResource("1_qpo7b")
 
 [node name="Headstone" type="MeshInstance3D" parent="." unique_id=700582077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+material_override = SubResource("StandardMaterial3D_qe13i")
 mesh = SubResource("BoxMesh_kdo1t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1862204226]
@@ -24,4 +30,5 @@ shape = SubResource("BoxShape3D_qu2x6")
 
 [node name="Mound" type="MeshInstance3D" parent="." unique_id=749294345]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 1.1)
+material_override = ExtResource("3_lhpym")
 mesh = SubResource("BoxMesh_3ecyj")
