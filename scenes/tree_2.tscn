@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dkqd3yjc535ft"]
+
+[ext_resource type="PackedScene" uid="uid://cfm58d5w1h6p" path="res://models/trees/tree07.fbx" id="1_iekdm"]
+[ext_resource type="Material" uid="uid://dwwi4rd03cy3q" path="res://materials/tree3.tres" id="2_wmt7p"]
+
+[node name="tree2" type="Node3D" unique_id=1660683387]
+
+[node name="tree07" parent="." unique_id=2132592657 instance=ExtResource("1_iekdm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="tree07" parent="tree07" index="0" unique_id=1370974142]
+surface_material_override/0 = ExtResource("2_wmt7p")
+
+[editable path="tree07"]

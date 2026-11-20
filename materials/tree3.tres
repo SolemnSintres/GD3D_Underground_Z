@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwwi4rd03cy3q"]
+
+[ext_resource type="Texture2D" uid="uid://b46twadyonefx" path="res://textures/tree07.png" id="1_unpdq"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 2
+albedo_texture = ExtResource("1_unpdq")
+metallic_specular = 0.0
+uv1_world_triplanar = true
