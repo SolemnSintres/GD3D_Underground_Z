@@ -1,11 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bidsrdaqbc48v"]
 
-[ext_resource type="Texture2D" uid="uid://dpabap3kpaej5" path="res://textures/stone.png" id="1_2f13b"]
+[ext_resource type="Texture2D" uid="uid://crq55jmuyk8fm" path="res://textures/pixelized_stone.png" id="1_2f13b"]
 
 [resource]
 shading_mode = 2
 albedo_texture = ExtResource("1_2f13b")
 metallic_specular = 0.0
-uv1_scale = Vector3(0.115, 0.115, 0.115)
 uv1_triplanar = true
 uv1_world_triplanar = true

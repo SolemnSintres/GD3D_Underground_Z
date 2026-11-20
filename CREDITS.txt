@@ -1,0 +1,2 @@
+pixelized_grass.png ambientCG Grass 001 CC0
+pixelized_stone.png ambientCG Asphalt 031 CC0
